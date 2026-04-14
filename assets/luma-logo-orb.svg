@@ -1,0 +1,25 @@
+<svg width="540" height="140" viewBox="0 0 540 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g1" x1="22" y1="22" x2="118" y2="118" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#8E2DFF"/>
+      <stop offset="0.52" stop-color="#B65CFF"/>
+      <stop offset="1" stop-color="#FF3DAC"/>
+    </linearGradient>
+    <linearGradient id="text1" x1="160" y1="36" x2="450" y2="104" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F8F5FF"/>
+      <stop offset="1" stop-color="#D5CBFF"/>
+    </linearGradient>
+    <filter id="glow1" x="0" y="0" width="140" height="140" filterUnits="userSpaceOnUse">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <g filter="url(#glow1)">
+    <circle cx="70" cy="70" r="49" stroke="url(#g1)" stroke-width="10"/>
+    <circle cx="70" cy="70" r="20" fill="url(#g1)"/>
+  </g>
+  <text x="150" y="86" fill="url(#text1)" font-size="52" font-family="Inter, Segoe UI, Arial, sans-serif" font-weight="700" letter-spacing="0.5">Luma AI</text>
+</svg>

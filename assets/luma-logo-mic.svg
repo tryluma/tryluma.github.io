@@ -1,0 +1,29 @@
+<svg width="540" height="140" viewBox="0 0 540 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g3" x1="24" y1="24" x2="118" y2="118" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7D2EFF"/>
+      <stop offset="0.5" stop-color="#C35BFF"/>
+      <stop offset="1" stop-color="#FF3DAD"/>
+    </linearGradient>
+    <linearGradient id="text3" x1="160" y1="34" x2="448" y2="104" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F8F4FF"/>
+      <stop offset="1" stop-color="#D0C8FF"/>
+    </linearGradient>
+    <filter id="glow3" x="0" y="0" width="140" height="140" filterUnits="userSpaceOnUse">
+      <feGaussianBlur stdDeviation="7.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <g filter="url(#glow3)">
+    <circle cx="70" cy="70" r="45" fill="url(#g3)"/>
+    <circle cx="70" cy="70" r="56" stroke="url(#g3)" stroke-opacity="0.55" stroke-width="4"/>
+    <rect x="63" y="50" width="14" height="28" rx="7" fill="#fff"/>
+    <path d="M54 72C54 81.3888 61.6112 89 71 89C80.3888 89 88 81.3888 88 72" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+    <path d="M71 89V97" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+    <path d="M63 97H79" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+  </g>
+  <text x="150" y="86" fill="url(#text3)" font-size="52" font-family="Inter, Segoe UI, Arial, sans-serif" font-weight="700" letter-spacing="0.5">Luma AI</text>
+</svg>

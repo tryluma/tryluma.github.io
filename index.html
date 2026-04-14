@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luma AI | Emotional Support, Reimagined</title>
+    <meta
+        name="description"
+        content="Luma AI offers supportive voice conversations with privacy-first design. Join the early access list."
+    >
+    <link rel="icon" type="image/png" href="./assets/download.png">
+    <link rel="apple-touch-icon" href="./assets/download.png">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container nav">
+            <div class="brand">
+                <img src="./assets/download.png" alt="Luma AI" class="brand-logo">
+            </div>
+            <a class="btn btn-outline" href="#signup">Get Early Access</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-grid">
+                <div class="hero-copy-card">
+                    <p class="eyebrow">Voice-first emotional support</p>
+                    <h1>A calmer place to talk when life feels heavy.</h1>
+                    <p class="subhead">
+                        Meet <strong>James</strong>, your AI psychotherapist. Speak naturally and get
+                        human-like responses with near-zero delay, plus real-time mood detection from
+                        your voice.
+                    </p>
+                    <p class="subhead">
+                        Private, supportive sessions built for emotional check-ins, reflection, and
+                        post-session clarity.
+                    </p>
+                    <div class="cta-row">
+                        <a class="btn btn-primary" href="#signup">Join Waitlist</a>
+                        <a class="btn btn-ghost" href="#how">How it works</a>
+                    </div>
+                </div>
+                <div class="hero-card app-preview-card">
+                    <p class="app-scroll-label">App walkthrough</p>
+                    <div class="app-scroll-frame" aria-label="Scrollable app UI screenshots">
+                        <img class="app-scroll-shot" src="./assets/app-idle.png" alt="Idle Luma app screen before session starts">
+                        <img class="app-scroll-shot" src="./assets/app-live-calm.png" alt="Live Luma app screen with calm mood state">
+                        <img class="app-scroll-shot" src="./assets/app-live-contemplation.png" alt="Live Luma app screen with contemplation mood state">
+                        <img class="app-scroll-shot" src="./assets/app-live-confusion.png" alt="Live Luma app screen with confusion mood state">
+                        <img class="app-scroll-shot" src="./assets/app-report.png" alt="Luma app generated session report screen">
+                    </div>
+                    <p class="app-scroll-note">Scroll inside this frame to view the complete live product flow.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="how" class="section">
+            <div class="container">
+                <h2>How it works</h2>
+                <div class="steps">
+                    <article class="step">
+                        <div class="step-icon" aria-hidden="true">🎙️</div>
+                        <h3>1) Start a session</h3>
+                        <p>Open Luma AI and start speaking with James in seconds. No setup, no forms, no friction.</p>
+                    </article>
+                    <article class="step">
+                        <div class="step-icon" aria-hidden="true">⚡</div>
+                        <h3>2) Feel understood</h3>
+                        <p>Speak naturally. James responds instantly with warm, supportive conversation and no awkward pauses.</p>
+                    </article>
+                    <article class="step">
+                        <div class="step-icon" aria-hidden="true">📊</div>
+                        <h3>3) Reflect and improve</h3>
+                        <p>Track real-time mood shifts during the session and generate a structured report when the session ends.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="section">
+            <div class="container">
+                <h2>Core product features</h2>
+                <p class="subhead">A focused breakdown of what users experience in every session.</p>
+                <div class="feature-list">
+                    <article class="feature-card">
+                        <h3>James: AI Psychotherapist</h3>
+                        <p>James is an AI Psychotherapist designed for realistic, human-style conversations that help users process stress, emotions, and everyday challenges in a supportive, judgment-free space.</p>
+                    </article>
+
+                    <article class="feature-card">
+                        <h3>Push-to-talk mic</h3>
+                        <p>Tap once to start talking, tap again to end session. This mirrors the one-button voice flow in the app.</p>
+                        <div class="demo-row">
+                            <button id="micDemoButton" class="voice-mic-btn feature-mic-btn" aria-pressed="false" aria-label="Toggle voice session demo">
+                                <span class="mic-glyph" aria-hidden="true"></span>
+                            </button>
+                            <p id="micDemoState" class="demo-state">Session idle</p>
+                        </div>
+                    </article>
+
+                    <article class="feature-card">
+                        <h3>Breathing circle + live mood shifts</h3>
+                        <p>Borrowed from your app frontend: click the orb to cycle mood colors and labels in real time.</p>
+                        <div class="demo-orb-wrap">
+                            <div id="demoBreathingCircle" class="demo-breathing-circle" aria-label="Mood breathing circle demo">
+                                <div class="demo-circle-outer"></div>
+                            </div>
+                            <p id="demoMoodText" class="demo-mood-chip">Mood: Calm</p>
+                        </div>
+                    </article>
+
+                    <article class="feature-card speaker-feature-card">
+                        <h3>Real-time speaker sensing</h3>
+                        <p>Live turn-taking detects active speaker states such as “You are speaking” and “James is speaking”.</p>
+                        <div class="demo-speaker-box">
+                            <p id="speakerState" class="speaker-state">You are speaking...</p>
+                            <button id="speakerToggle" class="btn speaker-toggle-btn" type="button">Switch Speaker</button>
+                        </div>
+                    </article>
+
+                    <article class="feature-card">
+                        <h3>Real-time transcription</h3>
+                        <p>As a session unfolds, lines stream in continuously so users can track conversation context.</p>
+                        <div class="demo-transcript-viewport" aria-label="Realtime transcript demo">
+                            <div id="demoTranscriptFeed" class="demo-transcript-feed"></div>
+                        </div>
+                    </article>
+
+                    <article class="feature-card">
+                        <h3>Report generator</h3>
+                        <p>After a session, users can generate a structured summary to review themes, progress, and follow-up actions.</p>
+                        <div class="report-demo-layout">
+                            <div class="report-demo-left">
+                                <button id="reportDemoButton" class="btn btn-primary" type="button">Generate Report</button>
+                            </div>
+                            <div class="report-demo-right">
+                                <article id="reportDemoArticle" class="demo-report-article hidden" aria-live="polite"></article>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section alt">
+            <div class="container">
+                <h2>Designed for trust</h2>
+                <div class="grid-2">
+                    <div class="panel">
+                        <h3>Support, not diagnosis</h3>
+                        <p>
+                            Luma AI is built for emotional support conversations and reflection.
+                            It is not a replacement for licensed medical care.
+                        </p>
+                    </div>
+                    <div class="panel">
+                        <h3>Privacy-first approach</h3>
+                        <p>
+                            We keep product architecture lean and transparent, with clear consent
+                            and safety pathways.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="signup" class="section">
+            <div class="container signup-wrap">
+                <div>
+                    <h2>Join early access</h2>
+                    <p class="subhead">
+                        Tell us who you are and we will contact you when spots open.
+                    </p>
+                </div>
+
+                <form
+                    id="waitlistForm"
+                    class="signup-form"
+                    data-sheet-endpoint="https://script.google.com/macros/s/AKfycby8C4wpSvjEAtDKzf49T3UY5btVu0voGUvyl0bY0OdBJpiKHXfCQwS6bMeD5Dp6I6EzdQ/exec"
+                    novalidate
+                >
+                    <label>
+                        Full name
+                        <input id="name" name="name" type="text" placeholder="Jane Doe" required>
+                    </label>
+
+                    <label>
+                        Email
+                        <input id="email" name="email" type="email" placeholder="jane@example.com" required>
+                    </label>
+
+                    <label class="checkbox">
+                        <input id="consent" name="consent" type="checkbox" required>
+                        <span>I agree to be contacted for Luma AI early access updates.</span>
+                    </label>
+
+                    <button class="btn btn-primary" type="submit">Request Access</button>
+                    <p id="formMessage" class="form-message" aria-live="polite"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>© <span id="year"></span> Luma AI. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="./app.js"></script>
+</body>
+</html>
