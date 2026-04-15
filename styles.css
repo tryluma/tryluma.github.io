@@ -179,6 +179,7 @@ h3 {
 
 .phone-showcase {
     position: relative;
+    --screen-right-mask: 14px;
     width: min(100%, 340px);
     aspect-ratio: 375 / 667;
     margin: 0 auto;
@@ -200,6 +201,24 @@ h3 {
     border-radius: 34px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     pointer-events: none;
+}
+
+.phone-showcase::after {
+    content: "";
+    position: absolute;
+    top: 12px;
+    right: 8px;
+    bottom: 10px;
+    width: var(--screen-right-mask);
+    border-radius: 0 30px 30px 0;
+    pointer-events: none;
+    z-index: 2;
+    background: linear-gradient(
+        90deg,
+        rgba(7, 7, 18, 0),
+        rgba(7, 7, 18, 0.82) 42%,
+        rgba(7, 7, 18, 0.98)
+    );
 }
 
 .phone-notch {
@@ -225,7 +244,6 @@ h3 {
     border-radius: 30px;
     background: #0a0a14;
     overflow: hidden;
-    clip-path: inset(0 14px 0 0 round 30px);
 }
 
 .app-showcase-actions {
