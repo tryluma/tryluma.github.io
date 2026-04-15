@@ -180,8 +180,8 @@ h3 {
 .phone-showcase {
     position: relative;
     width: min(100%, 289px);
-    /* Phone frame height: ~+7% vs original 375/637 (after prior tweaks then −4%) */
-    aspect-ratio: 375 / 683;
+    /* Phone frame height: ~+10% vs original 375/637 (683 → +3% height) */
+    aspect-ratio: 375 / 703;
     margin: 0 auto;
     overflow: hidden;
     border-radius: 38px;
