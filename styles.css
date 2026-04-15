@@ -180,8 +180,8 @@ h3 {
 .phone-showcase {
     position: relative;
     width: min(100%, 289px);
-    /* Taller phone frame (~+20% height vs 375/637) so embedded app UI isn’t clipped at bottom */
-    aspect-ratio: 375 / 764;
+    /* Phone frame height: ~+12% vs original 375/637 (after +20% then −7%) */
+    aspect-ratio: 375 / 711;
     margin: 0 auto;
     overflow: hidden;
     border-radius: 38px;
