@@ -179,8 +179,9 @@ h3 {
 
 .phone-showcase {
     position: relative;
-    width: min(100%, 340px);
-    aspect-ratio: 375 / 667;
+    width: min(100%, 289px);
+    /* ~4.5% shorter outer phone body vs 375/667 (3% + 1.5%), width unchanged */
+    aspect-ratio: 375 / 637;
     margin: 0 auto;
     overflow: hidden;
     border-radius: 38px;
@@ -222,15 +223,34 @@ h3 {
     height: 100%;
     border-radius: 30px;
     overflow: hidden;
-    background: #0a0a14;
+    /* Match the embedded PWA "phone-shell" backdrop so letterboxing looks like the app */
+    background:
+        radial-gradient(56% 30% at 22% 12%, rgba(143, 51, 255, 0.28) 0%, rgba(143, 51, 255, 0) 80%),
+        radial-gradient(45% 26% at 78% 92%, rgba(255, 61, 173, 0.2) 0%, rgba(255, 61, 173, 0) 78%),
+        linear-gradient(180deg, #0a0820 0%, #040410 100%);
+}
+
+.phone-screen-clip::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.5;
+    background-image:
+        radial-gradient(circle at 20% 14%, rgba(143, 51, 255, 0.22), transparent 20%),
+        radial-gradient(circle at 84% 8%, rgba(98, 183, 255, 0.16), transparent 17%),
+        radial-gradient(circle at 86% 90%, rgba(255, 61, 173, 0.15), transparent 18%);
 }
 
 .phone-screen {
-    display: block;
-    width: calc(100% + 20px);
-    height: 100%;
+    position: absolute;
+    top: -6.5%;
+    left: -10%;
+    width: 110%;
+    height: 106.5%;
     border: 0;
-    background: #0a0a14;
+    background: transparent;
+    display: block;
 }
 
 .app-showcase-actions {
