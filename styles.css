@@ -182,6 +182,7 @@ h3 {
     width: min(100%, 340px);
     aspect-ratio: 375 / 667;
     margin: 0 auto;
+    overflow: hidden;
     border-radius: 38px;
     border: 2px solid rgba(214, 220, 255, 0.72);
     background: linear-gradient(165deg, #050513, #0a0a1f 65%);
@@ -217,11 +218,13 @@ h3 {
 .phone-screen {
     position: relative;
     z-index: 1;
-    width: 100%;
+    width: calc(100% + 26px);
     height: 100%;
+    margin-right: -26px;
     border: 0;
     border-radius: 30px;
     background: #0a0a14;
+    overflow: hidden;
 }
 
 .app-showcase-actions {
