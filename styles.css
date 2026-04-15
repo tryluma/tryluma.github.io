@@ -215,13 +215,21 @@ h3 {
     z-index: 2;
 }
 
-.phone-screen {
+.phone-screen-clip {
     position: relative;
     z-index: 1;
     width: 100%;
     height: 100%;
-    border: 0;
     border-radius: 30px;
+    overflow: hidden;
+    background: #0a0a14;
+}
+
+.phone-screen {
+    display: block;
+    width: calc(100% + 20px);
+    height: 100%;
+    border: 0;
     background: #0a0a14;
 }
 
